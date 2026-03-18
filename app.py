@@ -113,7 +113,7 @@ hr {{ border-color: rgba(255,255,255,0.15); }}
 # ── Load data ──────────────────────────────────────────────────────────────────
 @st.cache_data
 def load_data():
-    df = pd.read_excel(r"C:\Users\josep.JOSE\OneDrive - oikonomics.com.ec\27. Alpina\0. Documentación inicial\2026.03.18. Precio percha de productos estudiados.xlsx", sheet_name="df")
+    df = pd.read_csv("https://github.com/JoseProanioM/productosAlpina/blob/2765f6f64529159629650cfd5c14d15ef751ee9a/precios.csv")
     df["Variedad"] = df["Variedad"].fillna("—")
     df["Tipo de Producto"] = df["Tipo de Producto"].fillna("—")
     df["Precio con escenario"] = df["Precio Percha SMX"] + df["Aumento de precio"]
